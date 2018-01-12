@@ -72,7 +72,7 @@ public class DropToken {
 	
 	private boolean checkWinner(int row, int column) {
 		boolean firstDiagonol = false;
-		if(row == column) { // 
+		if(row == column) { 
 			firstDiagonol = firstDiagonalWin();
 		} 
 		boolean secondDiagonol = false;
@@ -132,8 +132,8 @@ public class DropToken {
 
 	private int addMoveToBoard(int column) {
 		for(int i = 0; i < BOARD_LENGTH; i++) {  
-			if(board[i][column - 1] == 0) { // if enters finds open spot
-				moves.add(column); // add to moves list
+			if(board[i][column - 1] == 0) { 
+				moves.add(column); 
 				int player = 2 - moves.size() % 2;
 				board[i][column - 1] = player;
 				return i;
@@ -143,7 +143,6 @@ public class DropToken {
 	}
 
 	private String getMoves() {
-		// TODO Auto-generated method stub
 		String result = "";
 		for(int i = 0; i < moves.size(); i++) {
 			result += moves.get(i) + "\n";
